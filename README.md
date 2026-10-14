@@ -1,12 +1,10 @@
 # 🏢 Sistema de Reserva de Salas
 
-Projeto em Java que simula a reserva de salas, criado para praticar os pilares da
-**Programação Orientada a Objetos (POO)**: encapsulamento, herança e polimorfismo.
+Projeto em Java que simula a reserva de salas, criado para praticar os pilares da **Programação Orientada a Objetos (POO)**: encapsulamento, herança e polimorfismo.
 
 ## 📋 Sobre o projeto
 
-O sistema controla a disponibilidade de salas e valida as reservas de acordo com a
-capacidade e, no caso das salas de reunião, com a presença de projetor.
+O sistema controla a disponibilidade de salas e valida as reservas de acordo com a capacidade e, no caso das salas de reunião, com a presença de projetor.
 
 ### Classes
 
@@ -18,18 +16,15 @@ capacidade e, no caso das salas de reunião, com a presença de projetor.
 
 ### Regras de negócio
 
-- **Sala comum:** a reserva só é feita se a sala estiver disponível **e** a quantidade
-  de pessoas não ultrapassar a capacidade.
+- **Sala comum:** a reserva só é feita se a sala estiver disponível **e** a quantidade de pessoas não ultrapassar a capacidade.
 - **Sala de reunião:** além das regras acima, a sala precisa **possuir projetor**.
-- Ao reservar com sucesso, a sala passa a ficar indisponível até ser liberada
-  com `liberarSala()`.
+- Ao reservar com sucesso, a sala passa a ficar indisponível até ser liberada com `liberarSala()`.
 
 ## 🧠 Conceitos aplicados
 
 - **Encapsulamento:** atributos privados com getters e setters.
 - **Herança:** `SalaReuniao extends Sala`.
-- **Polimorfismo:** uma variável do tipo `Sala` pode guardar um `SalaReuniao`, e o
-  método `reservar()` executado é o da classe real do objeto (`@Override`).
+- **Polimorfismo:** uma variável do tipo `Sala` pode guardar um `SalaReuniao`, e o método `reservar()` executado é o da classe real do objeto (`@Override`).
 - **Reuso de construtor:** uso de `super(...)` em `SalaReuniao`.
 
 ## 🚀 Como executar
@@ -60,3 +55,18 @@ System.out.println(s1.reservar(2));   // false -> sala 1 já está reservada
 ```
 
 ### Saída esperada
+
+```
+true
+false
+false
+```
+
+## 📁 Estrutura
+
+```
+.
+├── App.java
+├── Sala.java
+└── SalaReuniao.java
+```
